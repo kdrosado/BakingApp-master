@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kdrosado.bakingapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Baking App"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--MainActivity-->
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--RecipeInfoActivity-->
+        <activity
+            android:name=".activities.RecipeInfoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!--RecipeDetailActivity-->
+        <activity
+            android:name=".activities.RecipeStepDetailActivity"
+            android:label="@string/title_recipe_step_detail"
+            android:parentActivityName=".activities.RecipeInfoActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="kdrosado.bakingapp.activities.RecipeInfoActivity" />
+        </activity>
+
+        <!--AppWidget-->
+        <receiver android:name=".widget.AppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/baking_recipes_app_widget_info" />
+        </receiver>
+
+        <!--AppWidgetService-->
+        <service
+            android:name=".widget.AppWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>
