@@ -115,7 +115,7 @@ public class RecipeInfoActivity extends AppCompatActivity {
             RecipeStepDetailFragment fragment = new RecipeStepDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.recipe_step_list, fragment)
+                    .replace(R.id.recipe_step_detail_container, fragment)
                     .commit();
         } else {
             Intent intent = new Intent(this, RecipeStepDetailActivity.class);
