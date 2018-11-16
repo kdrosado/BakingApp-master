@@ -9,6 +9,10 @@ You will productionize an app, taking it from a functional state to a production
 This will involve finding and handling error cases, adding accessibility features, allowing for 
 localization, adding a widget, and adding a library.
 
+# Screenshots
+
+<img src="Screenshot_1538765359.png" width="300" height="500">   <img src="Screenshot_1538765403.png" width="300" height="500">   <img src="Screenshot_1538765446.png" width="300" height="500">   <img src="Screenshot_1541696705.png" width="500" height="400">
+
 # Why this Project?
 As a working Android developer, you often have to create and implement apps where you are 
 responsible for designing and planning the steps you need to take to create a production-ready app. 
